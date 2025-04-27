@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Checklist de Visita - Clube do Lago</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(to right, #e0f7fa, #b2ebf2);
+            border-radius: 8px;
+        }
+        h1 {
+            color: #006064;
+            margin-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 25px;
+            padding: 15px;
+            border: 1px solid #b2ebf2;
+            border-radius: 8px;
+        }
+        .section-title {
+            color: #00838f;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        .item {
+            margin-bottom: 10px;
+            padding: 8px;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+        }
+        .checkbox {
+            margin-right: 10px;
+        }
+        .notes {
+            margin-top: 5px;
+            padding: 5px;
+            border: 1px dashed #b2ebf2;
+            border-radius: 4px;
+            min-height: 20px;
+            background-color: white;
+            cursor: text;
+        }
+        .print-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #00838f;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        @media print {
+            .print-button {
+                display: none;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Mentoria para o Clube do Lago</h1>
+        <p>Checklist de Visita e Análise</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Visão Estratégica</div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Visão clara para o futuro do clube
+            <div class="notes" contenteditable="true" id="visao-1"></div>
+        </div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Objetivos de curto, médio e longo prazo definidos
+            <div class="notes" contenteditable="true" id="visao-2"></div>
+        </div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Estilo de equipe desejado (valores e comportamentos)
+            <div class="notes" contenteditable="true" id="visao-3"></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Estrutura Física e Ambiente</div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Espaços bem aproveitados e organizados
+            <div class="notes" contenteditable="true" id="estrutura-1"></div>
+        </div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Estrutura precisa de reformas ou melhorias
+            <div class="notes" contenteditable="true" id="estrutura-2"></div>
+        </div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Ambientes oferecem conforto para clientes
+            <div class="notes" contenteditable="true" id="estrutura-3"></div>
+        </div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Espaços de apoio para funcionários
+            <div class="notes" contenteditable="true" id="estrutura-4"></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Experiência do Cliente</div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Primeira impressão positiva (entrada, recepção)
+            <div class="notes" contenteditable="true" id="experiencia-1"></div>
+        </div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Serviços bem sinalizados e acessíveis
+            <div class="notes" contenteditable="true" id="experiencia-2"></div>
+        </div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Fluxo interno facilita a circulação
+            <div class="notes" contenteditable="true" id="experiencia-3"></div>
+        </div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Ambiente transmite a proposta do clube
+            <div class="notes" contenteditable="true" id="experiencia-4"></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Gestão de Pessoas</div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Processos internos claros para a equipe
+            <div class="notes" contenteditable="true" id="gestao-1"></div>
+        </div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Clima organizacional positivo
+            <div class="notes" contenteditable="true" id="gestao-2"></div>
+        </div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Comunicação eficiente entre liderança e funcionários
+            <div class="notes" contenteditable="true" id="gestao-3"></div>
+        </div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Incentivos ou reconhecimento para funcionários
+            <div class="notes" contenteditable="true" id="gestao-4"></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Processos Operacionais</div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Rotinas diárias bem definidas
+            <div class="notes" contenteditable="true" id="processos-1"></div>
+        </div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Padrões de atendimento claros
+            <div class="notes" contenteditable="true" id="processos-2"></div>
+        </div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Eventos e atrações organizados de forma sistemática
+            <div class="notes" contenteditable="true" id="processos-3"></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Liderança</div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Empresária se posiciona como líder
+            <div class="notes" contenteditable="true" id="lideranca-1"></div>
+        </div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Equilíbrio entre empatia e autoridade
+            <div class="notes" contenteditable="true" id="lideranca-2"></div>
+        </div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Capacidade de delegar e confiar na equipe
+            <div class="notes" contenteditable="true" id="lideranca-3"></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Principais Desafios</div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Dificuldades relatadas pela empresária
+            <div class="notes" contenteditable="true" id="desafios-1"></div>
+        </div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Padrões de problemas identificados
+            <div class="notes" contenteditable="true" id="desafios-2"></div>
+        </div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Pontos que geram maior desgaste de energia
+            <div class="notes" contenteditable="true" id="desafios-3"></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Pontos Fortes</div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Diferenciais do clube
+            <div class="notes" contenteditable="true" id="fortes-1"></div>
+        </div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Feedbacks positivos de clientes ou equipe
+            <div class="notes" contenteditable="true" id="fortes-2"></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Oportunidades de Melhoria</div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Áreas a serem desenvolvidas no curto prazo
+            <div class="notes" contenteditable="true" id="melhorias-1"></div>
+        </div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Melhorias estruturais, de processo ou de equipe
+            <div class="notes" contenteditable="true" id="melhorias-2"></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Energia da Empresária</div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Nível de energia e motivação para liderar
+            <div class="notes" contenteditable="true" id="energia-1"></div>
+        </div>
+        <div class="item">
+            <input type="checkbox" class="checkbox"> Preocupação com autocuidado
+            <div class="notes" contenteditable="true" id="energia-2"></div>
+        </div>
+    </div>
+
+    <button class="print-button" onclick="window.print()">Imprimir Checklist</button>
+
+    <script>
+        // Adiciona funcionalidade para salvar as anotações
+        document.querySelectorAll('.notes').forEach(noteArea => {
+            // Carrega as anotações salvas
+            const savedNote = localStorage.getItem(noteArea.id);
+            if (savedNote) {
+                noteArea.innerHTML = savedNote;
+            }
+
+            // Salva as anotações quando o usuário digita
+            noteArea.addEventListener('input', function() {
+                localStorage.setItem(this.id, this.innerHTML);
+            });
+        });
+    </script>
+</body>
+</html> 
